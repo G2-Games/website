@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>maniacs page</title>
+    <link rel="stylesheet" href="assets/style.css?random=@Environment.TickCount">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.gif">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body onload="updateTaskbar()">
+    <div class="taskbar">
+        <div class="start-icon"></div>
+        <div class="start-menu"></div>
+        <div class="start-apps">
+            <div class="placeholder" style="display:hidden; width: 0;"></div>
+        </div>
+    </div>
+
+    <div class="window" style="resize: both;">
+        <div class="title-bar draggable">
+            <img class="window-icon" src="assets/images/icons/browser.png">
+            <div class="window-title">Program 1</div>
+            <div class="window-controls">
+                <div class="minimize" onclick="minimizeWindow(this)"></div>
+                <div class="fullscreen" onclick="fullscreen(this)"></div>
+                <div class="close"></div>
+            </div>
+        </div>
+        <div class="window-content">
+            <h1>This is a test page</h1>
+            <audio controls src="assets/sounds/song.mp3"></audio>
+            <br>
+            <h2>Test</h2>
+            <h3>Test</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nulla facilisis, viverra ex sed, consequat enim. Morbi ut ligula consectetur, ultrices sem eget, mollis sapien. Ut sit amet consectetur lectus. Vestibulum risus nulla, egestas vitae lectus ac, commodo ultrices ante. Praesent sagittis consequat augue id semper. Fusce in bibendum dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse consectetur tempus tortor, ut eleifend ante dignissim at. Vivamus pretium ac risus nec cursus. Sed ac interdum ante. Sed consectetur, arcu in gravida sagittis, enim nibh ullamcorper risus, eget porta justo diam nec tortor. Integer egestas velit egestas iaculis luctus. Mauris dictum nunc id quam aliquet, id elementum sem finibus. Vestibulum vitae faucibus nisl, eu molestie diam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. </p>
+        </div>
+    </div>
+
+    <div class="window" style="width: 600px;resize: both;">
+        <div class="title-bar draggable">
+            <img class="window-icon" src="assets/images/icons/wmp.webp">
+            <div class="window-title">Windows Media Player</div>
+            <div class="window-controls">
+                <div class="minimize" onclick="minimizeWindow(this)"></div>
+                <div class="fullscreen" onclick="fullscreen(this)"></div>
+                <div class="close"></div>
+            </div>
+        </div>
+        <div class="window-content">
+            <video src="assets/videos/toast-movie2.mp4" controls
+                style="
+                width:100%;
+                height:100%;
+                object-fit:contain;
+                background-color:black;"></video>
+        </div>
+    </div>
+
+    <div class="window" style="width: 500px; min-height: 120px;height:120px;">
+        <div class="title-bar draggable">
+            <img class="window-icon" src="assets/images/icons/question.png">
+            <div class="window-title">Awesome Tip</div>
+            <div class="window-controls">
+                <div class="close"></div>
+            </div>
+        </div>
+        <div class="window-content">
+            <a href="pages/lightbulb"><img src="assets/images/icons/alert.png" class="dialog-image"></a>
+            <span class="dialog-text"><b>This is Devi's window</b></span>
+            <button style="box-shadow:0 0 2px 3px red; position: absolute; right: 0;bottom: 0;" onclick="window.location.href = 'pages/bluescreen'">OK</button>
+        </div>
+    </div>
+
+    <div class="window" style="resize:both;height:200px;">
+        <div class="title-bar draggable">
+            <img class="window-icon" src="assets/images/icons/notepad.webp">
+            <div class="window-title">Notepad</div>
+            <div class="window-controls">
+                <div class="minimize" onclick="minimizeWindow(this)"></div>
+                <div class="fullscreen" onclick="fullscreen(this)"></div>
+                <div class="close"></div>
+            </div>
+        </div>
+        <div class="window-outline">
+            <div class="action-bar">
+                <button class="action-button"><u>F</u>ile</button>
+                <button class="action-button"><u>E</u>dit</button>
+                <button class="action-button">F<u>o</u>rmat</button>
+                <button class="action-button"><u>V</u>iew</button>
+                <button class="action-button"><u>H</u>elp</button>
+            </div>
+            <textarea style="
+                font-family: 'Consolas', 'Hack', monospace;
+                font-weight: regular;
+                font-size: 12pt;
+                white-space: nowrap;
+                box-sizing:border-box;
+                width:100%;
+                height:100%;
+                resize:none;
+                padding:3px;
+                border:none;
+                border-top: 1px navyblue;
+                border-radius:0.5px;
+                outline:0.5px solid skyblue;
+            "></textarea>
+        </div>
+    </div>
+
+        <div class="window" style="resize:both;height:200px;">
+        <div class="title-bar draggable">
+            <!--img class="window-icon" src="assets/images/icons/notepad.webp"-->
+            <div class="window-title">cmd.exe</div>
+            <div class="window-controls">
+                <div class="minimize" onclick="minimizeWindow(this)"></div>
+                <div class="fullscreen" onclick="fullscreen(this)"></div>
+                <div class="close"></div>
+            </div>
+        </div>
+        <div class="window-outline">
+            <iframe src="https://g2games.dev/random/maniacs/terminal/index.html"></iframe>
+        </div>
+    </div>
+
+</body>
+
+    <!-- Scripts, they make the world go 'round! -->
+    <script src="assets/scripts/init.js"></script>
+    <script src="assets/scripts/drag.js"></script>
+    <script src="assets/scripts/random.js"></script>
+    <script src="assets/scripts/taskbar.js"></script>
+    <script src="assets/scripts/misc.js"></script>
+</html>

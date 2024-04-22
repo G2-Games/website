@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>G2's Website | welcome.sh</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="G2">
+    <meta name="description" content="A nice welcome script for Bash and Zsh ">
+    <meta name="theme-color" content="#2ec2c2">
+    <meta property="og:title" content="G2's Website | welcome.sh">
+    <meta property="og:description" content="A nice welcome script for Bash and Zsh ">
+    <meta property="og:image" content="/assets/shell3.png">
+    <meta name="twitter:title" content="G2's Website | welcome.sh">
+    <link rel="icon" href="https://g2games.dev/icon.webp">
+
+    <link rel="stylesheet" href="/assets/main-style.css">
+
+    <style>
+        figure {
+            position: relative;
+            margin: auto;
+            font-family: 'Hack Nerd Font', monospace;
+            font-size: 14pt;
+            border: solid 2px;
+            padding: 20px 10px;
+            margin: 0px;
+            border-radius: 8px;
+            background-color: #212324;
+            box-shadow: 0 5px 15px 4px #666;
+            resize: both;
+            overflow: auto;
+        }
+
+        @font-face {
+            font-family: "Hack Nerd Font";
+            src: url(HackNerdFont-Regular.ttf);
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script>
+        function startTime() {
+            const today = new Date();
+            let hour = today.getHours();
+            let minute = today.getMinutes();
+            let ampm = hour >= 12 ? 'PM' : 'AM';
+            hour = hour % 12;
+            hour = hour ? hour : 12;
+            if (minute < 10) {minute = "0" + minute};
+            document.getElementById('hour').innerHTML =  hour;
+            document.getElementById('minute').innerHTML = minute;
+            document.getElementById('ampm').innerHTML = ampm;
+            setTimeout(startTime, 1000);
+        }
+
+        function greeting() {
+            const today = new Date();
+            let hour = today.getHours();
+            console.log(hour);
+            let time = document.getElementById('fuzzytime');
+            let clock = document.getElementById('clock');
+
+            if (hour <= 11 && hour > 6) {
+                time.innerHTML = "morning";
+                time.style.color = "rgb(255, 164, 74)";
+            } else if (hour == 12) {
+                time.innerHTML = "noon";
+                time.style.color = "rgb(250, 245, 110)";
+                clock.style.color = "rgb(200, 107, 209)";
+            } else if (hour < 16 && hour > 12) {
+                time.innerHTML = "afternoon";
+                time.style.color = "rgb(250, 245, 110)";
+                clock.style.color = "rgb(200, 107, 209)";
+            } else if (hour < 19 && hour > 17) {
+                time.innerHTML = "evening";
+                time.style.color = "rgb(171, 54, 3)";
+                clock.style.color = "rgb(200, 107, 209)";
+            } else {
+                time.innerHTML = "night";
+                time.style.color = "rgb(200, 107, 209)";
+                clock.style.color = "rgb(200, 107, 209)";
+            }
+        }
+
+        function randColor() {
+            var cluma = 0;
+            while (cluma <= 100) {
+                var cr = Math.floor(Math.random() * (255));
+                var crl = cr * 0.299;
+                var cg = Math.floor(Math.random() * (255));
+                var cgl = cr * 0.587;
+                var cb = Math.floor(Math.random() * (255));
+                var cbl = cr * 0.114;
+                var cluma = crl + cgl + cbl;
+            }
+            return "rgb(" + cr + ", " + cg + ", " + cb + ")"
+        }
+
+        function setColors() {
+            document.getElementById('user').style.color = randColor();
+        }
+
+        function battery() {
+            let battery_level = 0;
+            let batspan = document.getElementById('batlev');
+            navigator.getBattery()
+                .then(function(battery) {
+                console.log(battery.level);
+                battery_level = battery.level;
+                batspan.innerHTML = "The battery level is " + Math.floor(battery_level * 100) + "%";
+            });
+        }
+
+        function updates() {
+            var updates = Math.floor(Math.random() * (50));
+            document.getElementById('updates').innerHTML = "~<span style='color:#11d016;'>" + updates + "</span>"
+        }
+    </script>
+</head>
+
+<body onload="startTime(); setColors(); greeting(); updates(); battery()">
+    <header>
+        <a href="https://github.com/G2-Games/welcome.sh"><h1>welcome.sh</h1></a>
+        <ul class="navigation">
+            <a href="/"><li>Home</li></a>
+            <a href="/random"><li>Random</li></a>
+            <a href="/portfolio"><li>Portfolio</li></a>
+            <a href="/blog"><li>Blog</li></a>
+        </ul>
+    </header>
+
+
+    <main style="height:100%;">
+        <section class="centered">
+            <figure>
+                Welcome, <span id="user" style="color:#dd23c5;font-weight:700;"><span spellcheck="false" role="textbox" contenteditable/>g2</span></span>. It's <span id="fuzzytime" style="color:#faf56e;">afternoon</span>. The time is <span id="clock" style="font-weight:700;color:rgb(200, 107, 209);"><clock id="hour">3</clock><span style="animation: blinker 1s step-end infinite;">:</span><clock id="minute">47</clock> <clock id="ampm">PM</clock></span>. You have <span id="updates">no</span> pending updates. <span id="batlev"></span>
+                <br>
+                <span style="background-color:#0087d7;">&nbsp;g2 </span><span style="color:#0087d7;background-color:#585858;"></span><span style="background-color:#585858;"> ~ </span><span style="color:#585858;"></span> <a href="https://github.com/G2-Games/welcome.sh">get welcome.sh</a>
+                <br>
+                bash: get: command not found
+                <br>
+                <span style="background-color:#0087d7;">&nbsp;g2 </span><span style="color:#0087d7;background-color:#585858;"></span><span style="background-color:#585858;"> ~ </span><span style="color:#585858;"></span> <span style="animation: blinker 1.2s infinite;animation-timing-function:ease-out;">█</span>
+            </figure>
+        </section>
+    </main>
+
+    <br>
+
+    <footer>
+        <p>&copy;2023 G2</p>
+        <p>Powered by <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"></a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"></a></p>
+    </footer>
+</body>
+
+</html>

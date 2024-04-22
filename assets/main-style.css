@@ -1,0 +1,489 @@
+/* Fonts */
+
+@import url('fonts/fonts.css');
+@import url('img-style.css');
+@import url('code-style.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #111114;
+    background-color: #81d174;
+}
+
+hr {
+    background-color: grey;
+    border: none;
+    height: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header */
+
+header {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1  {
+    font-size: 3em;
+    font-family: "Roboto Slab";
+    transition-duration: 1s;
+}
+
+header h1:hover {
+    scale: 1.1;
+}
+
+header a:link, header a:visited, header a:hover {
+    text-decoration: none;
+    color: unset;
+}
+
+header .navigation {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 15pt;
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+header .navigation a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: unset;
+    font-style: none;
+    position: relative;
+}
+
+header .navigation a::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    border-bottom: 2px solid slategray;
+    left: 0;
+    bottom: -3px;
+    scale: 0 1;
+    transition: scale 0.2s ease;
+    transform-origin: top right;
+}
+
+header .navigation a:hover::after {
+    scale: 1 1;
+    transform-origin: top left;
+}
+
+header .navigation a.active {
+    font-weight: bold;
+    font-style: normal;
+}
+
+header .navigation a.active:hover {
+    brightness: 200%;
+}
+
+header .navigation a.active::after {
+    border-bottom: 2px solid slategray;
+    transform-origin: top left;
+    scale: 1 1;
+}
+
+header .navigation a.active:hover::after {
+    transform-origin: top left;
+    scale: 1 1.5;
+}
+
+abbr {
+    text-decoration-thickness: 2px;
+    text-decoration-line: dotted;
+}
+
+/* Main Content */
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    row-gap: 35px;
+}
+
+h2.sep, main section.centered h2 {
+    display: flex;
+    flex-direction: row;
+    grid-column: span 2;
+}
+
+h2.sep.center {
+    justify-content: center;
+}
+
+h2.sep.center::before {
+    content: '';
+    display: block;
+    background-color: gray;
+    flex-grow: 1;
+    margin-right: 20px;
+    height: 2px;
+    top: 20px;
+    margin-top: 20px;
+}
+
+h2.sep::after, main section.centered h2::after {
+    content: '';
+    display: block;
+    background-color: gray;
+    flex-grow: 1;
+    margin-left: 20px;
+    height: 2px;
+    top: 20px;
+    margin-top: 20px;
+}
+
+figure.showcase img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+    transition-duration: 1s;
+    border-radius: 13px;
+}
+
+figure.showcase img:hover {
+    transform: scale(1.05) rotate3d(1, 0, 0, 15deg);
+    filter: drop-shadow(0 10px 8px grey);
+}
+
+main section {
+    width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.centered {
+    grid-column: span 2;
+    max-width: 800px;
+    min-width: 100%;
+}
+
+main section img {
+    max-width: 95%;
+    margin: auto;
+    display: block;
+    border-radius: 13px;
+}
+
+main > a:link, main > a:visited, main > a:hover,
+.holder > a:link, .holder > a:visited, .holder > a:hover {
+    text-decoration: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+section.clickable {
+    background-color: #d5d5d5;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 1px;
+    transition: transform 0.3s cubic-bezier(.63,-0.25,.55,1.8);
+    transform-origin: 50% 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: black;
+}
+
+section.clickable::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 5px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+section.clickable:hover {
+    transform: rotate(-3deg);
+}
+
+section.clickable hr {
+    margin-top: auto;
+}
+
+.doublebox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 95%;
+    translate: -50% 0;
+    left: 50%;
+    position: relative;
+    height: fit-content;
+}
+
+main h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25pt;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+main h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 22pt;
+    font-weight: 300;
+}
+
+main h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+main p, .type-text p {
+    font-size: 15pt;
+    line-height: 1.7em;
+    text-align: left;
+    text-justify: auto;
+    margin-bottom: 20px;
+    hyphens: auto;
+    hyphenate-character: '-';
+}
+
+ul, ol {
+    font-size: 15pt;
+    line-height: 1.7em;
+    text-align: left;
+    margin-bottom: 20px;
+    hyphens: auto;
+    hyphenate-character: '-';
+    margin-left: 40px;
+
+    /*
+    li {
+        margin-left: 40px;
+    }
+    */
+}
+
+p + ul, p + ol {
+    margin-top: -20px;
+}
+
+main .tags {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main .tags p:first-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+
+footer {
+    width: auto;
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+footer p.paginator {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    position: relative;
+}
+
+footer p.paginator .next {
+    display: block;
+    position: absolute;
+    right: 10px;
+}
+
+footer p.paginator .prev {
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
+/* Blog Style */
+blockquote {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: justify;
+    text-justify: auto;
+    margin-left: 20px;
+    position: relative;
+}
+
+blockquote::before {
+    content: ' ';
+    left: -20px;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+mark {
+    background-color: #6aff55;
+    border-radius: 2px;
+}
+
+mark::selection {
+    color: #111114;
+    background-color: #ff738f;
+}
+
+.date {
+    margin: 0;
+    margin-top: 4px;
+    font-family: 'Montserrat';
+}
+
+/* Mobile/Small Screens */
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    header .navigation {
+        margin-left: unset;
+    }
+
+    /* Main */
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h2.sep {
+        grid-column: span 1;
+    }
+
+    main section.centered h2 {
+        grid-column: span 1;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    .centered {
+        grid-column: span 1;
+    }
+
+    figure.showcase {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    pre[class*="language-" ],
+    code[class*="language-"] {
+        white-space: pre;
+    }
+}
+
+
+/* Dark theme stuff */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fffde6;
+        background-color: #111114;
+    }
+
+    ::selection {
+        color: #111114;
+        background-color: #a6e3a1;
+    }
+
+    a:link {
+        color: #59ffb4;
+    }
+
+    a:visited {
+        color: #fff098;
+    }
+
+    a:hover {
+        color: #b4e2ff;
+    }
+
+    /* Header */
+
+    header .navigation a.active::after {
+        border-bottom: 2px solid #fffde6;
+    }
+
+    /* Main Content */
+
+    main > a:link, main > a:visited, main > a:hover {
+        color: #FFF;
+    }
+
+    hr {
+        background-color: aliceblue;
+    }
+
+    /*
+    main p {
+        color: #FFF;
+    }*/
+
+    section.clickable {
+        color: white;
+        background-color: #2b2b32;
+    }
+
+    section.clickable > h2 {
+        color: white;
+    }
+
+    section.clickable::after {
+        background-color: peachpuff;
+    }
+}

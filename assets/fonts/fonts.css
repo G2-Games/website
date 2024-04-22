@@ -1,0 +1,51 @@
+/*
+ * This file contains fonts for my various web pages,
+ * packaged in an easy to import way.
+ */
+
+/* Main Display */
+@font-face {
+    font-family: "Montserrat";
+    src: url('Montserrat.ttf');
+}
+
+/* Serif */
+@font-face {
+    font-family: "IBM Plex Serif";
+    src: url('IBMPlexSerif.ttf');
+}
+
+/* Impact */
+@font-face {
+    font-family: "Roboto";
+    src: url('Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url('RobotoSlab.ttf');
+}
+
+/* Monospaced */
+@font-face {
+    font-family: 'Maple Mono';
+    font-style: normal;
+    font-feature-settings: "ss02" off;
+    src: url('MapleMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Maple Mono';
+    font-style: italic;
+    font-feature-settings: "liga" on;
+    src: url('MapleMono-Italic.woff2') format('woff2');
+}
+
+/* Too big...
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 100 200 300 400 500 600 700;
+    src: url('material-icons.woff2');
+}
+*/

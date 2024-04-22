@@ -1,0 +1,50 @@
+/* Image grid stuff */
+section.img_grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+section.img_grid img {
+    height: 300px;
+    max-width: 100%;
+    flex: 1 2 auto;
+    object-fit: cover;
+    transition:
+        scale 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86),
+        filter 0.4s ease,
+        flex-grow 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    margin: 0;
+    border-radius: 0;
+}
+
+section.img_grid img:hover {
+    scale: 1.05;
+    flex-grow: 4;
+    filter: drop-shadow(0 0px 8px grey);
+    z-index: 100;
+}
+
+.pixel {
+    image-rendering: pixelated;
+}
+
+img.icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1em;
+}
+
+@media(max-width: 700px) {
+    section.img_grid {
+        flex-direction: column;
+    }
+
+    section.img_grid img {
+        width: 100%;
+        height: auto;
+    }
+}

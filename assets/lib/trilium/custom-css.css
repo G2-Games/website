@@ -1,0 +1,134 @@
+h1 {
+    font-size: 3em;
+    font-family: "Roboto Slab";
+}
+
+h1#title {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+#parentLink {
+    float: right;
+    font-size: 15pt;
+    font-family: 'Roboto Slab';
+    margin-top: 35px;
+}
+
+@media(max-width: 700px) {
+    #parentLink {
+        float: none;
+    }
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 25pt;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+h2::after, h3::after, h4::after, h5::after, h6::after {
+    content: '';
+    display: block;
+    background-color: gray;
+    flex-grow: 1;
+    margin-left: 20px;
+    height: 2px;
+    top: 20px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 22pt;
+}
+
+h4 {
+    font-size: 20pt;
+    margin-left: 10px;
+}
+
+h5 {
+    font-size: 18pt;
+    margin-left: 10px;
+}
+
+h6 {
+    font-size: 16pt;
+    margin-left: 10px;
+}
+
+#menu, #toggleMenuButton {
+    display: none;
+}
+
+#childLinks {
+    padding-bottom: 200px;
+}
+
+#childLinks span {
+    font-size: 1.5em;
+}
+
+.katex-display {
+    margin: 0 5px;
+    overflow-x: scroll;
+    padding-bottom: 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.katex-display::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.table {
+    width: 100%;
+    display: flex!important;
+    overflow-x: scroll;
+    flex-direction: column-reverse;
+    font-size: 15pt;
+}
+
+.table::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+th {
+    background: hsla(0, 0%, 0%, 50%)!important;
+    color: white;
+}
+
+.table > figcaption {
+    width: 100%;
+    font-size: 15pt!important;
+    border-bottom: 3px dashed black;
+}
+
+.image > figcaption {
+    border-top: 3px dashed black;
+}
+
+code {
+    color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+    code {
+        color: #ebebeb;
+    }
+}

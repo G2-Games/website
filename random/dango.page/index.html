@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dango</title>
+    <link rel="icon" href="assets/icon.gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        var videoURLs = [
+            "hosted_files/misc/DangoVids/uukowo.mp4"
+            , "hosted_files/misc/DangoVids/whatifweheldhandsnexttothecityanimeopeningfloshed.mp4"
+            , "hosted_files/misc/DangoVids/Stare_poke_No.1_05312020_by_dango_8015.mp4"
+            , "hosted_files/misc/DangoVids/Space_Purple (2).mp4"
+            , "hosted_files/misc/DangoVids/Space_Purple (1).mp4"
+            , "hosted_files/misc/DangoVids/Space_Purple (1).mp4"
+            , "hosted_files/misc/DangoVids/osaka (1).mp4"
+            , "hosted_files/misc/DangoVids/niikurayeet_1.mp4"
+            , "hosted_files/misc/DangoVids/mandelcity.mp4"
+            , "hosted_files/misc/DangoVids/ezgif.com-gif-maker-Recovered.mp4"
+            , "hosted_files/misc/DangoVids/dgo.mp4"
+            , "hosted_files/misc/DangoVids/dangodreamarchive2.mp4"
+            , "hosted_files/misc/DangoVids/Comp_1_1.mp4"
+            , "hosted_files/misc/DangoVids/Comp_1.mp4"
+            , "hosted_files/misc/DangoVids/CirniumVibe.mp4"
+            , "hosted_files/misc/DangoVids/alternate.mp4"
+            , "hosted_files/misc/DangoVids/2020-08-25_17-38-44.mp4"
+            , "hosted_files/misc/DangoVids/2020-01-12_00-18-50_1_1.mp4"
+            , "hosted_files/misc/DangoVids/0001-0184.mp4"
+            , "hosted_files/misc/DangoVids/supernano.mp4"
+            , "hosted_files/misc/DangoVids/wakont.mp4"
+            , "hosted_files/misc/DangoVids/Comp_1_1 (4).mp4"
+            , "hosted_files/misc/DangoVids/maybenexttime13.mp4"
+            , "hosted_files/misc/DangoVids/2020-01-07_17-33-19.mp4"
+            , "hosted_files/misc/DangoVids/pillarsnowmen.mp4"
+            , "hosted_files/misc/DangoVids/22244_1.mp4"
+            , "hosted_files/misc/DangoVids/miOO.mp4"
+            , "hosted_files/misc/DangoVids/2020-02-14_16-28-26.mp4"
+            , "hosted_files/misc/DangoVids/ilied.mp4"
+            , "hosted_files/misc/DangoVids/sleeping_interruptions_.mp4"
+            , "hosted_files/misc/DangoVids/you.mp4"
+            , "hosted_files/misc/DangoVids/unknown.mp4"
+            , "hosted_files/misc/DangoVids/622977479501414400.mp4"
+            , "hosted_files/misc/DangoVids/22244.mp4"
+            , "hosted_files/misc/DangoVids/Comp_1 (4).mp4"
+            , "hosted_files/misc/DangoVids/Comp_1 (3).mp4"
+            , "hosted_files/misc/DangoVids/oneddd.mp4"
+            , "hosted_files/misc/DangoVids/atwhatcost.mp4"
+            , "hosted_files/misc/DangoVids/melobyte3s.mp4"
+            , "hosted_files/misc/DangoVids/0001-0250.mp4"
+            , "hosted_files/misc/DangoVids/milk.mp4"
+            , "hosted_files/misc/DangoVids/milk_1.mp4"
+            , "hosted_files/misc/DangoVids/Comp_1 (2).mp4"
+            , "hosted_files/misc/DangoVids/Comp_1_1 (3).mp4"
+            , "hosted_files/misc/DangoVids/thefee_1.mp4"
+            , "hosted_files/misc/DangoVids/mp4_1_1_1.mp4"
+            , "hosted_files/misc/DangoVids/2020-01-12_00-18-50_1_1_1.mp4"
+            , "hosted_files/misc/DangoVids/eab136ceac851751.mp4"
+            , "hosted_files/misc/DangoVids/Comp_1_2.mp4"
+            , "hosted_files/misc/DangoVids/Hunting.mp4"
+            , "hosted_files/misc/DangoVids/Lost_Sucharaka_Shaded.mp4"
+            , "hosted_files/misc/DangoVids/current_atmosphere.mp4"
+            , "hosted_files/misc/DangoVids/iu_2.mp4"
+            , "hosted_files/misc/DangoVids/yu.mp4"
+            , "hosted_files/misc/DangoVids/2020-08-12_00-55-22 (1).mp4"
+            , "hosted_files/misc/DangoVids/2020-08-21_05-41-05.mp4"
+            , "hosted_files/misc/DangoVids/2020-07-14_18-00-13.mp4"
+            , "hosted_files/misc/DangoVids/chris.mp4"
+            , "hosted_files/misc/DangoVids/snowmangoodbye.mp4"
+            , "hosted_files/misc/DangoVids/snowmangreetings.mp4"
+            , "hosted_files/misc/DangoVids/new_footage_of_the_falcon_9_test_launch.mp4"
+            , "hosted_files/misc/DangoVids/panuki.mp4"
+            , "hosted_files/misc/DangoVids/depthtest.mp4"
+            , "hosted_files/misc/DangoVids/GreenCirno.mp4"
+        ];
+
+        function getImageTag() {
+            var video = '<video oncontextmenu="return false;" class="video" id="video1" muted autoplay src=\"';
+            var randomIndex = Math.floor(Math.random() * videoURLs.length);
+            video += videoURLs[randomIndex];
+            video += '\"/>';
+            video.volume = 0.5;
+            return video;
+        }
+
+        function toggleMute() {
+            var video = document.getElementById("video1");
+            video.volume = 0.5;
+            video.muted = false;
+        }
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        navigator.mediaSession.setActionHandler('play', function() {});
+    </script>
+    <style>
+        html {
+            background-color: #2C2F33;
+        }
+
+        .video {
+            display: block;
+            height: 100vh;
+            height: -webkit-fill-available;
+            width: 100vw;
+            margin: 0 auto;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .progress1 {
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            max-width: 100vw;
+            z-index: 5;
+            display: block;
+            position: fixed;
+            cursor: help;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <script type="text/javascript">
+            document.write(getImageTag());
+            document.getElementById('video1').addEventListener('ended',myHandler,false);
+            function myHandler(e) {location.reload(); }
+            var video = document.getElementById("video1");
+        </script>
+    </div>
+</body>
+
+</html>

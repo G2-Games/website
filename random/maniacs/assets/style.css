@@ -1,0 +1,87 @@
+@import "taskbar-style.css";
+@import "window-style.css";
+
+/* Set up the fonts */
+@font-face {
+  font-family: "Higurashi Font";
+  src: url("fonts/Higurashi Font.otf");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("fonts/Segoe UI.ttf");
+}
+
+@font-face {
+  font-family: "Courier New";
+  src: url("fonts/cour.ttf");
+}
+
+@font-face {
+  font-family: "Lucidia Console";
+  src: url("fonts/lucid-console.ttf");
+}
+
+@font-face {
+  font-family: "Consolas";
+  src: url("fonts/consolas.ttf");
+}
+
+@font-face {
+  font-family: "Hack";
+  src: url("fonts/hack.woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-image: url("images/backgrounds/background.webp");
+    background-size: cover;
+    background-color: #0a72cb;
+    font-family: "Segoe UI", sans-serif;
+    background-position: center;
+    height: 100vh;
+    cursor: url('images/cursors/windows7_arrow.webp'), auto;
+}
+
+a {
+    cursor: url('images/cursors/windows7_link.webp') 5 1, auto;
+}
+
+h1, h2, h3, h4, p, span {
+    cursor: text;
+}
+
+h1 {
+    font-family: "Higurashi Font", serif;
+    line-height: 1.2;
+}
+
+button {
+    border: 1px solid #6f6f6f;
+    width: 86px;
+    height: 24px;
+    border-radius: 3px;
+    background: linear-gradient(0deg, #d4d4d4 0%, #dfdfdf 50%, rgba(242,242,242,1) 50%, rgba(234,234,234,1) 100%);
+    box-shadow: 0 0 0 1px inset white;
+    margin: 10px;
+    cursor: url('images/cursors/windows7_link.webp'), auto;
+}
+
+button:hover {
+    filter: brightness(105%);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: none;
+}

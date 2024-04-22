@@ -1,0 +1,42 @@
+code {
+    background-color: #2d2d2d;
+    color: #ebebeb;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: "Maple Mono", monospace;
+    font-style: normal;
+    font-size: 14pt;
+}
+
+div.code-toolbar {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+div.code-toolbar .toolbar {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+
+    .toolbar-item {
+        font-size: 16pt;
+    }
+}
+
+pre[class*="language-" ],
+code[class*="language-"] {
+    overflow: auto;
+    font-family: "Maple Mono", monospace;
+    border-radius: 13px;
+    white-space: pre-wrap;
+}
+
+pre > code{
+    padding: 0px;
+}
+
+.token.comment {
+    font-style: italic;
+}

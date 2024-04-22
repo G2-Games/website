@@ -1,0 +1,22 @@
+<svg version="1.1" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="chromatic">
+            <feColorMatrix type="matrix"
+                result="red_"
+                values="4 0 0 0 0
+                        0 0 0 0 0
+                        0 0 0 0 0
+                        0 0 0 1 0"/>
+            <feOffset in="red_" dx="1" dy="-1" result="red"/>
+            <feColorMatrix type="matrix"
+                in="SourceGraphic"
+                result="blue_"
+                values="0 0 0 0 0
+                        0 3 0 0 0
+                        0 0 10 0 0
+                        0 0 0 1 0"/>
+            <feOffset in="blue_" dx="-2" dy="1" result="blue"/>
+            <feBlend mode="screen" in="red" in2="blue"/>
+        </filter>
+    </defs>
+</svg>

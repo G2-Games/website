@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=IBM+Plex+Sans:wght@400;700&family=Montserrat:wght@300;400;500&family=Raleway:wght@300&family=Roboto&family=Roboto+Slab:wght@500&display=swap');
+
+@font-face {
+  font-family: "Maple Mono";
+  src: url("MapleMono-Regular.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #FAF;
+}
+
+header {
+    margin-top: 30px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: linear-gradient(0deg,
+        #0000 45%,
+        #bfac8e 45%,
+        #bfac8e 55%,
+        #0000 55%
+    );
+}
+
+header embed {
+    background-color: #FAF;
+    max-height: 200px;
+    padding: 0 100px;
+}
+
+.navBox {
+    height: fit-content;
+    background: #FFF;
+    font-family: "Maple Mono";
+    color: #FFF;
+    font-weight: Bold;
+    transition-duration: 0.2s;
+    padding: 10px 0;
+
+    border-radius: 30px;
+    transform: translate(-6px, -7px);
+    filter: drop-shadow(6px 7px 0px #414178);
+}
+
+.navBox:hover {
+    transform: translate(0px, 0px);
+    filter: drop-shadow(0px 0px 0px #414178);
+}
+
+.navBox a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    font-size: 2.2em;
+    padding: 15px 50px;
+}
+
+.navBox:first-of-type {
+    background: #ff738f;
+}
+
+.navBox:last-of-type {
+    background: #37d6a7;
+}
+
+header nav {
+    width:fit-content;
+    margin-left: auto;
+    display: block;
+}

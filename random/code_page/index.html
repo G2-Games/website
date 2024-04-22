@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><title>Rust Functions</title><link href="https://g2games.dev/icon.webp" rel="icon"><link href="https://g2games.dev/assets/main-style.css" rel="stylesheet"><link href="https://g2games.dev/assets/lib/prism/prism.css" rel="stylesheet"><script src="https://g2games.dev/assets/lib/prism/prism.js"></script><meta content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes"></head><body><header><a href="/"><h1>G2 Games</h1></a><ul class="navigation">
+                <a class="active" href="/"><li>Home</li></a>
+                <a href="/random"><li>Random</li></a>
+                <a href="/portfolio"><li>Portfolio</li></a>
+                <a href="/blog"><li>Blog</li></a>
+            </ul></header><main><section class="centered"><h2>test_function()</h2><div class="code-toolbar"><pre class="line-numbers language-rust" data-language="rust" tabindex="0"><code class="language-rust">pub fn test_function() {
+    let array = [0; 32];
+
+    for number in array {
+        println!(&quot;{}&quot;, number);
+    }
+
+    println!(&quot;Hello, world!&quot;);
+}
+
+</code></pre><div class="toolbar"><div class="toolbar-item"><span>RUST</span></div><div class="toolbar-item"></div></div></div><p>Does the silly! <br>A multiline one!?!?</p></section><section class="centered"><h2>write_file()</h2><div class="code-toolbar"><pre class="line-numbers language-rust" data-language="rust" tabindex="0"><code class="language-rust">pub fn write_file&lt;T: serde::Serialize&gt;(
+    library: T,
+    path: PathBuf,
+) -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    // Create a temporary name for writing out
+    let mut writer_name = path.clone();
+    writer_name.set_extension(&quot;tmp&quot;);
+
+    // Create a new BufWriter on the file and a snap frame encoder
+    let writer = BufWriter::new(File::create(&amp;writer_name)?);
+    let mut e = snap::write::FrameEncoder::new(writer);
+
+    // Write out the data
+    bincode::serde::encode_into_std_write(
+        library,
+        &amp;mut e,
+        bincode::config::standard()
+            .with_little_endian()
+            .with_variable_int_encoding(),
+    )?;
+    fs::rename(writer_name, &amp;path)?;
+
+    Ok(())
+}
+</code></pre><div class="toolbar"><div class="toolbar-item"><span>RUST</span></div><div class="toolbar-item"></div></div></div><p>Write any data structure which implements [serde::Serialize] out to a [bincode] encoded file compressed using [snap]</p></section></main></body></html>

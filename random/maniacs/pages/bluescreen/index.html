@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whoops!</title>
+    <link rel="stylesheet" href="assets/style.css?random=@Environment.TickCount">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../icon.gif">
+    <style>
+        @font-face {
+            font-family: "Hack";
+            src: url("../../assets/fonts/hack.woff2");
+        }
+        ::selection {
+            background: #ff4242;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: #00007a;margin: 0;overflow:hidden;" id="demo">
+    <p style="color: white;font-size:2vh;font-family: Hack;margin:10% 15%;">A problem has [[Bean]] detected and Musicmaniacs.exe has to be shut down forever to prevent your computer of exploding.<br>
+    <br>
+    COLONY_MANAGEMENT<br>
+    <br>
+    If this is the first time you've seen this error screen, give up. If this screen appears again, follow these steps:<br>
+    <br>
+    Check to make sure any new [[Rock]]ware or [[Cloud]]ware is properly installed. If this is a new installation, ask your nearest Doctor for <a href="../../" style="font-weight:bold;text-decoration:none;color:yellow;">[[Get back]]</a> you might need.<br>
+    <br>
+    If problems continue, disable or remove [[System32]]. Disable [Monitor] options such as [[Lighting]] or [[Blackout]]. If you need to use Safe Mode to remove or disable the entity behind you, restart your computer, press F1 to select [[AdvancedHealthyOptions]], and then select Unsafe Mod.<br>
+    <br>
+    Technical Information:<br>
+    <br>
+    *** CEASE: 0x1997001B<br>
+    <br>
+    Beginning dump of physical universe<br>
+    Physical universe dump incomplete<br>
+    <br>
+    Contact your penguin administrator or technical windowed group for no further assistance.</p>
+</body>
+<script>
+    const element = document.getElementById("demo");
+    setInterval(function () {
+        element.style.filter = "url('filters.svg#chromatic')";
+    }, Math.floor(Math.random() * 1000));
+    setInterval(function () {
+        element.style.filter = ""
+    }, Math.floor(Math.random() * 1500));
+</script>
+</html>
