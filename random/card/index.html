@@ -5,130 +5,25 @@
     <title>G2's Website</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        @import url('https://g2games.dev/assets/fonts/fonts.css');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #111114;
-            color: mintcream;
-            position: relative;
-            height: 100vh;
-            font-family: "Maple Mono";
-            font-size: 16pt;
-            width: 100vw;
-            padding: 5px;
-        }
-
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-                scale: 90%;
-            }
-            to {
-                opacity: 1;
-                scale: 100%;
-            }
-        }
-
-        main {
-            animation-name: fade-in;
-            animation-duration: 1s;
-            animation-timing-function: cubic-bezier(.37,1.08,.83,1.12);
-
-            width: 400px;
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            left: 50%;
-            top: 50%;
-            translate: -50% -50%;
-            padding: 30px;
-
-            gap: 25px;
-
-            background-color: #26262d;
-            box-shadow: 0px 5px 20px black;
-
-            border-radius: 10px;
-        }
-
-        img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            margin: auto;
-            box-shadow: 4px 5px 2px black;
-        }
-
-        h1 {
-            height: fit-content;
-            margin: auto;
-            font-family: "Montserrat";
-            font-weight: 400;
-        }
-
-        hr {
-            border: none;
-            background: mediumaquamarine;
-            height: 2px;
-        }
-
-        p {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        li {
-            margin-left: 20px;
-        }
-
-        .left_corner {
-            height: 20px;
-            width: 20px;
-            border-left: 2px solid mediumaquamarine;
-            border-top: 2px solid mediumaquamarine;
-            margin-bottom: -40px;
-        }
-
-        .right_corner {
-            height: 20px;
-            width: 20px;
-            border-right: 2px solid gold;
-            border-bottom: 2px solid gold;
-            margin-top: -40px;
-            margin-left: auto;
-        }
-
-        div {
-            padding: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <div>
+        <header>
             <img src="TeraTeradaMelon.png">
             <h1>Hi, I'm G2</h1>
-        </div>
+        </header>
+
         <span class="left_corner"></span>
-        <p>Some interesting text about me presented in a very concise manner.</p>
+        <p>I am a software developer specializing in Rust and website design.</p>
         <span class="right_corner"></span>
+
         <div style="width:fit-content;margin:auto;">
-            <p>GitHub</p>
-            <p>Email</p>
+            <p><a href="https://github.com/G2-Games/">GitHub</a></p>
+            <p><a href="mailto:ke0bhogsg@gmail.com">Email</a></p>
         </div>
-        <hr>
+
+        <hr style="background: linear-gradient(90deg, rgba(102,153,221,1) 0%, rgba(102,221,170,1) 100%);">
     </main>
 </body>
 </html>

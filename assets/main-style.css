@@ -259,6 +259,7 @@ main h3 {
     font-family: "Montserrat", sans-serif;
     font-size: 22pt;
     font-weight: 300;
+    margin-bottom: 10px;
 }
 
 main h4 {
@@ -381,6 +382,11 @@ mark::selection {
     margin: 0;
     margin-top: 4px;
     font-family: 'Montserrat';
+}
+
+#footnotelist ol li span a:last-of-type{
+    margin-left: 10px;
+    border-left: 1px solid grey;
 }
 
 /* Mobile/Small Screens */
