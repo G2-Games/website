@@ -1,11 +1,11 @@
 code {
     background-color: #2d2d2d;
     color: #ebebeb;
-    padding: 3px;
+    padding: 2px;
     border-radius: 3px;
     font-family: "Maple Mono", monospace;
     font-style: normal;
-    font-size: 14pt;
+    /*font-size: 14pt;*/
 }
 
 div.code-toolbar {

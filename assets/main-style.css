@@ -1,6 +1,7 @@
 /* Fonts */
-
 @import url('fonts/fonts.css');
+
+/* Auxillary Styles */
 @import url('img-style.css');
 @import url('code-style.css');
 
@@ -60,7 +61,7 @@ header a:link, header a:visited, header a:hover {
     color: unset;
 }
 
-header .navigation {
+nav {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 15pt;
@@ -70,7 +71,7 @@ header .navigation {
     font-style: italic;
 }
 
-header .navigation a {
+nav a {
     margin-right: 15px;
     text-decoration: none;
     color: unset;
@@ -78,7 +79,7 @@ header .navigation a {
     position: relative;
 }
 
-header .navigation a::after {
+nav a::after {
     content: '';
     width: 100%;
     position: absolute;
@@ -90,27 +91,27 @@ header .navigation a::after {
     transform-origin: top right;
 }
 
-header .navigation a:hover::after {
+nav a:hover::after {
     scale: 1 1;
     transform-origin: top left;
 }
 
-header .navigation a.active {
+nav a.active {
     font-weight: bold;
     font-style: normal;
 }
 
-header .navigation a.active:hover {
+nav a.active:hover {
     brightness: 200%;
 }
 
-header .navigation a.active::after {
+nav a.active::after {
     border-bottom: 2px solid slategray;
     transform-origin: top left;
     scale: 1 1;
 }
 
-header .navigation a.active:hover::after {
+nav a.active:hover::after {
     transform-origin: top left;
     scale: 1 1.5;
 }
@@ -325,7 +326,7 @@ footer p:last-child {
     margin-bottom: 0;
 }
 
-footer p.paginator {
+nav.paginator {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -333,15 +334,22 @@ footer p.paginator {
     margin-bottom: 20px;
     font-size: 1.8em;
     position: relative;
+
+    font-style: normal;
+    font-weight: bold;
 }
 
-footer p.paginator .next {
+nav.paginator::hover {
+    all: unset;
+}
+
+nav.paginator .next {
     display: block;
     position: absolute;
     right: 10px;
 }
 
-footer p.paginator .prev {
+nav.paginator .prev {
     display: block;
     position: absolute;
     left: 10px;

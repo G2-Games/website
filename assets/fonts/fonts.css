@@ -5,8 +5,8 @@
 
 /* Main Display */
 @font-face {
-    font-family: "Montserrat";
-    src: url('Montserrat.ttf');
+    font-family: "Roboto";
+    src: url('Roboto-Regular.ttf');
 }
 
 /* Serif */
@@ -17,8 +17,8 @@
 
 /* Impact */
 @font-face {
-    font-family: "Roboto";
-    src: url('Roboto-Regular.ttf');
+    font-family: "Montserrat";
+    src: url('Montserrat.ttf');
 }
 
 @font-face {
@@ -40,12 +40,3 @@
     font-feature-settings: "liga" on;
     src: url('MapleMono-Italic.woff2') format('woff2');
 }
-
-/* Too big...
-@font-face {
-    font-family: 'Material Symbols Outlined';
-    font-style: normal;
-    font-weight: 100 200 300 400 500 600 700;
-    src: url('material-icons.woff2');
-}
-*/

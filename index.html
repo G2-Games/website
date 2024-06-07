@@ -16,7 +16,7 @@ A place for personal projects and things. Enjoy!">
     <meta name="twitter:title" content="G2's Website">
     <link rel="icon" href="https://g2games.dev/icon.webp">
 
-    <!-- Selfhosted Analytics -->
+    <!-- Self-hosted Analytics -->
     <script data-goatcounter="https://resize.g2games.dev/count"
         async src="//resize.g2games.dev/count.js"></script>
 
@@ -26,88 +26,133 @@ A place for personal projects and things. Enjoy!">
 <body>
     <header>
         <a href="/"><h1>G2 Games</h1></a>
-        <ul class="navigation">
-            <a class="active" href="/"><li>Home</li></a>
-            <a href="/random"><li>Random</li></a>
-            <a href="/portfolio"><li>Portfolio</li></a>
-            <a href="/blog"><li>Blog</li></a>
-        </ul>
+        <nav>
+            <a class="active" href="/">Home</a>
+            <a href="/random">Random</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/blog">Blog</a>
+        </nav>
     </header>
 
-    <main class="holder">
+    <main>
         <figure class="showcase">
-            <img src="/assets/images/showcase.webp" alt="A picture of some fields at sunset with trees and a dirt road.">
+            <img src="/assets/images/showcase.webp" alt="A picture of the moon through a telescope">
         </figure>
 
         <section>
             <h2 class="sep">About Me</h2>
-            <p>Hey, I'm G2. I spend most of my time avoiding social media, improving my website, and writing code in Rust. This website is selfhosted on a <a class="ext" href="https://en.wikipedia.org/wiki/Raspberry_Pi#Series_and_generations">Raspberry Pi 5</a> 8GB running <a href="https://ubuntu.com/server">Ubuntu Server</a>. The CSS can be found <a href="https://g2games.dev/assets/main-style.css">here</a>.</p>
-            <p>If you would like to get in touch with me, <a class="ext" href="mailto:g2@g2games.dev">Email</a> is the best way to do so.</p>
+            <p>Hey, I'm G2.</p>
+            <p>
+                I spend most of my time avoiding all social media, improving my website, writing code in Rust, bicycling, and thinking about cool tech.
+                This website is self-hosted on a <a href="https://en.wikipedia.org/wiki/Raspberry_Pi#Series_and_generations">Raspberry Pi 5</a> 8GB running
+                <a href="https://ubuntu.com/server">Ubuntu Server</a>.
+                The CSS can be found <a href="https://g2games.dev/assets/main-style.css">here</a>.
+            </p>
+
+            <p style="margin-bottom:2px;">If you would like to get in touch with me, I actively check:</p>
+            <p style="margin-bottom:2px;">〜 Email: <code>g2@g2games.dev</code></p>
+            <p>〜 Discord: <code>g2_games</code></p>
+
             <p>Some more of my links:</p>
-            <p style="text-align:center;"><a href="https://github.com/G2-Games">GitHub</a> • <a href="/git">Gitea</a></p>
+            <p style="text-align:center;">
+                <a href="https://github.com/G2-Games">GitHub</a> &blacklozenge;
+                <a href="/git">Gitea</a> &blacklozenge;
+                <a href="https://ko-fi.com/g2_games">Ko-fi</a>
+            </p>
         </section>
 
+        <!-- Links to my stuff -->
         <h2 class="sep center">My Pages</h2>
-
         <a href="/blog"><section class="clickable">
             <h3>Blog</h3>
-            <p>My personal blog. I post about whatever is interesting me at the moment, usually something tech or photography related, but not always.</p>
+            <p>My personal blog. I post about whatever is interesting me at the
+            moment, usually something tech or photography related, but not
+            always.</p>
         </section></a>
 
         <a href="/portfolio"><section class="clickable">
             <h3>My Portfolio</h3>
-            <p>This portfolio is a list of things I have done and things I am currently doing.</p>
+            <p>This portfolio is a list of things I have done and things I am
+            currently doing. Not comprehensive, and also I dislike selling
+            myself.</p>
         </section></a>
 
         <a href="/random"><section class="clickable">
             <h3>Random Stuff</h3>
-            <p>I tend to make a lot of random things on the internet. You can check out many of those things on this page. Most aren't very interesting, but they might entertain you for a while at least!</p>
+            <p>I tend to make a lot of random things on the internet. You can
+            check out many of those things on this page. Most aren't very
+            interesting, but they might entertain you for a while at least!</p>
         </section></a>
 
+        <!-- More about me -->
+        <h2 class="sep center">More About Me</h2>
+        <section class="centered">
+            <p>
+                I like MiniDisc devices, and have written
+                <a href="https://github.com/G2-Games/minidisc-rs">some software</a>
+                for them! I personally have an MZ&#8209;NF610, MZ&#8209;NHD600, and an
+                MZ&#8209;E707. Go check out <a href="https://www.minidisc.wiki/">the wiki!</a>
+            </p>
+            <p>
+                I also like the Sony PSP and PSVita consoles, I hope to do some homebrew for
+                the PSP in the future (check out <a href="https://github.com/overdrivenpotato/rust-psp">
+                the Rust SDK</a> for it!).
+            </p>
+            <p>
+                I appreciate physical media of all kinds, such as CDs, DVD/Blu-Rays, MiniDiscs, and
+                anything else physical. It's just nice to have a real high quality copy of the media,
+                that is yours <i>forever</i>!
+            </p>
+            <p>
+                I'm interested in aerospace, including rockets, aircraft, and similar things. I've made
+                a few projects related to it as well as part of clubs.
+            </p>
+        </section>
+
+        <!-- Favorite things -->
         <h2 class="sep center">My Favorites</h2>
         <section class="centered">
-            <p>A small list of things I enjoy. Y'know, favorites!</p>
+            <p>A small list of things I enjoy. Favorites! This isn't at
+            all comprehensive and I'd love to add more.</p>
         </section>
 
         <section>
-            <p class="list_title">Text/Code Editor:</p>
+            <p>General Apps:</p>
+            <ul>
+                <li>Browser - <a href="https://www.mozilla.org/en-US/firefox/" title="Keep the web free!">Firefox</a></li>
+                <li>Notetaking - <a href="https://github.com/zadam/trilium">Trilium</a></li>
+                <li>Music Player - <a href="https://tauonmusicbox.rocks/">Tauon</a></li>
+            </ul>
+
+            <p>Text/Code Editor:</p>
             <ul>
                 <li><a href="https://kate-editor.org/">Kate</a></li>
             </ul>
 
-            <p class="list_title">Fonts:</p>
+            <p>Fonts:</p>
             <ul>
                 <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
                 <li><a href="https://github.com/subframe7536/maple-font">Maple Mono</a></li>
                 <li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a></li>
                 <li><a href="https://fonts.google.com/noto">Noto</a></li>
             </ul>
-
-            <p class="list_title">Programming Languages:</p>
-            <ul>
-                <li><a href="https://www.rust-lang.org/">Rust</a></li>
-                <li><a href="https://www.python.org/">Python</a></li>
-            </ul>
         </section>
 
         <section>
-            <p class="list_title">Shell:</p>
+            <p>Programming Languages:</p>
+            <ul>
+                <li><a href="https://www.rust-lang.org/">Rust</a></li>
+                <li><a href="https://www.python.org/">Python</a></li>
+                <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+            </ul>
+
+            <p>Shell:</p>
             <ul>
                 <li><a href="https://www.gnu.org/software/bash/">Bash</a> <i>Linux</i></li>
-                <li><a href="https://www.gnu.org/software/bash/">PowerShell</a> <i>Windows</i></li>
+                <li><a href="https://github.com/PowerShell/PowerShell">PowerShell</a> <i>Windows</i></li>
             </ul>
 
-            <p class="list_title">Notetaking App:</p>
-            <ul>
-                <li><a href="https://github.com/zadam/trilium">Trilium</a></li>
-            </ul>
-
-            <p class="list_title">Browser:</li>
-            <ul>
-                <li><a title="Keep the web free!" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></li>
-            </ul>
-
-            <p class="list_title">Desktop Environment:</p>
+            <p>Desktop Environment:</p>
             <ul>
                 <li><a href="https://kde.org/plasma-desktop/">KDE Plasma</a></li>
             </ul>
@@ -116,7 +161,11 @@ A place for personal projects and things. Enjoy!">
 
     <footer>
         <p>&copy;2024 G2</p>
-        <p>Powered by <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"></a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"></a></p>
+        <p>Powered by
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"><img class="icon" alt="HTML logo icon" src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"></a>
+            and
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS"><img class="icon" alt="CSS logo icon" src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"></a>
+        </p>
     </footer>
 </body>
 </html>
