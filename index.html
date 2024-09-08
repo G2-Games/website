@@ -20,8 +20,11 @@ A place for personal projects and things. Enjoy!">
     <script data-goatcounter="https://resize.g2games.dev/count"
         async src="//resize.g2games.dev/count.js"></script>
 
-    <!-- The Stylesheet -->
+    <!-- The Stylesheets -->
     <link rel="stylesheet" href="/assets/main-style.css">
+
+    <!-- Music Tile -->
+    <link rel="stylesheet" href="/assets/lib/scripts/music_status.css">
 </head>
 <body>
     <header>
@@ -56,8 +59,10 @@ A place for personal projects and things. Enjoy!">
             <p>Some more of my links:</p>
             <p style="text-align:center;">
                 <a href="https://github.com/G2-Games">GitHub</a> &blacklozenge;
-                <a href="/git">Gitea</a> &blacklozenge;
-                <a href="https://ko-fi.com/g2_games">Ko-fi</a>
+                <a href="/git">Forgejo</a> &blacklozenge;
+                <a href="https://ko-fi.com/g2_games">Ko-fi</a> &blacklozenge;
+                <a href="/search">Search</a> &blacklozenge;
+                <a href="/portfolio">Portfolio</a>
             </p>
         </section>
 
@@ -68,13 +73,6 @@ A place for personal projects and things. Enjoy!">
             <p>My personal blog. I post about whatever is interesting me at the
             moment, usually something tech or photography related, but not
             always.</p>
-        </section></a>
-
-        <a href="/portfolio"><section class="clickable">
-            <h3>My Portfolio</h3>
-            <p>This portfolio is a list of things I have done and things I am
-            currently doing. Not comprehensive, and also I dislike selling
-            myself.</p>
         </section></a>
 
         <a href="/random"><section class="clickable">
@@ -111,52 +109,63 @@ A place for personal projects and things. Enjoy!">
 
         <!-- Favorite things -->
         <h2 class="sep center">My Favorites</h2>
-        <section class="centered">
-            <p>A small list of things I enjoy. Favorites! This isn't at
-            all comprehensive and I'd love to add more.</p>
-        </section>
+        <div class="centered three_column">
+            <section>
+                <p>General Apps:</p>
+                <ul>
+                    <li>Browser - <a href="https://www.mozilla.org/en-US/firefox/" title="Keep the web free!">Firefox</a></li>
+                    <li>Notetaking - <a href="https://github.com/zadam/trilium">Trilium</a></li>
+                    <li>Music Player - <a href="https://tauonmusicbox.rocks/">Tauon</a></li>
+                </ul>
 
-        <section>
-            <p>General Apps:</p>
-            <ul>
-                <li>Browser - <a href="https://www.mozilla.org/en-US/firefox/" title="Keep the web free!">Firefox</a></li>
-                <li>Notetaking - <a href="https://github.com/zadam/trilium">Trilium</a></li>
-                <li>Music Player - <a href="https://tauonmusicbox.rocks/">Tauon</a></li>
-            </ul>
+                <p>Editors:</p>
+                <ul>
+                    <li>Text Editor - <a href="https://kate-editor.org/">Kate</a></li>
+                    <li>Hex Editor - <a href="https://imhex.werwolv.net/">ImHex</a></li>
+                </ul>
 
-            <p>Text/Code Editor:</p>
-            <ul>
-                <li><a href="https://kate-editor.org/">Kate</a></li>
-            </ul>
+                <p>Fonts:</p>
+                <ul>
+                    <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
+                    <li><a href="https://github.com/subframe7536/maple-font">Maple Mono</a></li>
+                    <li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a></li>
+                    <li><a href="https://fonts.google.com/noto">Noto</a></li>
+                </ul>
+            </section>
 
-            <p>Fonts:</p>
-            <ul>
-                <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
-                <li><a href="https://github.com/subframe7536/maple-font">Maple Mono</a></li>
-                <li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a></li>
-                <li><a href="https://fonts.google.com/noto">Noto</a></li>
-            </ul>
-        </section>
+            <section>
+                <p>Programming Languages:</p>
+                <ul>
+                    <li><a href="https://www.rust-lang.org/">Rust</a></li>
+                    <li><a href="https://www.python.org/">Python</a></li>
+                    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+                </ul>
 
-        <section>
-            <p>Programming Languages:</p>
-            <ul>
-                <li><a href="https://www.rust-lang.org/">Rust</a></li>
-                <li><a href="https://www.python.org/">Python</a></li>
-                <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-            </ul>
+                <p>Shell:</p>
+                <ul>
+                    <li><a href="https://www.gnu.org/software/bash/">Bash</a> <i>Linux</i></li>
+                    <li><a href="https://github.com/PowerShell/PowerShell">PowerShell</a> <i>Windows</i></li>
+                </ul>
 
-            <p>Shell:</p>
-            <ul>
-                <li><a href="https://www.gnu.org/software/bash/">Bash</a> <i>Linux</i></li>
-                <li><a href="https://github.com/PowerShell/PowerShell">PowerShell</a> <i>Windows</i></li>
-            </ul>
+                <p>Desktop Environment:</p>
+                <ul>
+                    <li><a href="https://kde.org/plasma-desktop/">KDE Plasma</a></li>
+                </ul>
+            </section>
 
-            <p>Desktop Environment:</p>
-            <ul>
-                <li><a href="https://kde.org/plasma-desktop/">KDE Plasma</a></li>
-            </ul>
-        </section>
+            <section>
+                <div class="music_tile">
+                    <p id="musicStatus">Currently listening to:</p>
+                    <p class="track_name" id="track">???</p>
+                    <hr>
+                    <div style="display:flex;flex-direction:column;">
+                        <p class="artist_name" id="albumArtist">???</p>
+                        <p class="album_name" id="albumTitle">???</p>
+                    </div>
+                    <img id="mainArtwork" src="https://placehold.co/260/2220/FFFDE6?text=?&font=roboto"/>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -168,4 +177,5 @@ A place for personal projects and things. Enjoy!">
         </p>
     </footer>
 </body>
+<script src="/assets/lib/scripts/music_status.js"></script>
 </html>

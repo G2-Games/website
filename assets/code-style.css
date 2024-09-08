@@ -5,7 +5,7 @@ code {
     border-radius: 3px;
     font-family: "Maple Mono", monospace;
     font-style: normal;
-    /*font-size: 14pt;*/
+    font-size: 13pt;
 }
 
 div.code-toolbar {
@@ -30,7 +30,6 @@ code[class*="language-"] {
     overflow: auto;
     font-family: "Maple Mono", monospace;
     border-radius: 13px;
-    white-space: pre-wrap;
 }
 
 pre > code{

@@ -35,8 +35,7 @@ hr {
     margin-bottom: 20px;
 }
 
-/* Header */
-
+/* --- Header --- */
 header {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -121,8 +120,7 @@ abbr {
     text-decoration-line: dotted;
 }
 
-/* Main Content */
-
+/* --- Main Content --- */
 main {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -185,13 +183,23 @@ main section {
 
 .centered {
     grid-column: span 2;
-    max-width: 800px;
-    min-width: 100%;
+    /*max-width: 800px;*/
+    /*min-width: 100%;*/
+}
+
+.three_column {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+        width: fit-content;
+        padding-right: 10px;
+    }
 }
 
 main section img {
     max-width: 95%;
-    margin: auto;
+    margin: 20px auto;
     display: block;
     border-radius: 13px;
 }
@@ -308,8 +316,7 @@ main .tags p:first-child {
     margin-bottom: 0;
 }
 
-/* Footer */
-
+/* --- Footer --- */
 footer {
     width: auto;
     margin-top: auto;
@@ -326,36 +333,7 @@ footer p:last-child {
     margin-bottom: 0;
 }
 
-nav.paginator {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    position: relative;
-
-    font-style: normal;
-    font-weight: bold;
-}
-
-nav.paginator::hover {
-    all: unset;
-}
-
-nav.paginator .next {
-    display: block;
-    position: absolute;
-    right: 10px;
-}
-
-nav.paginator .prev {
-    display: block;
-    position: absolute;
-    left: 10px;
-}
-
-/* Blog Style */
+/* --- Blog Style --- */
 blockquote {
     font-family: "IBM Plex Serif", serif;
     font-size: 15pt;
@@ -397,7 +375,36 @@ mark::selection {
     border-left: 1px solid grey;
 }
 
-/* Mobile/Small Screens */
+nav.paginator {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    position: relative;
+
+    font-style: normal;
+    font-weight: bold;
+}
+
+nav.paginator::hover {
+    all: unset;
+}
+
+nav.paginator .next {
+    display: block;
+    position: absolute;
+    right: 10px;
+}
+
+nav.paginator .prev {
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
+/* --- Mobile/Small Screens --- */
 @media(max-width: 700px) {
     header {
         flex-direction: column;
@@ -428,6 +435,11 @@ mark::selection {
 
     .centered {
         grid-column: span 1;
+        min-width: 100%;
+    }
+
+    .three_column {
+        grid-template-columns: 1fr;
     }
 
     figure.showcase {
@@ -442,8 +454,7 @@ mark::selection {
     }
 }
 
-
-/* Dark theme stuff */
+/* --- Dark theme stuff --- */
 @media (prefers-color-scheme: dark) {
     body {
         color: #fffde6;
@@ -467,13 +478,13 @@ mark::selection {
         color: #b4e2ff;
     }
 
-    /* Header */
+    /* --- Header --- */
 
     header .navigation a.active::after {
         border-bottom: 2px solid #fffde6;
     }
 
-    /* Main Content */
+    /* --- Main Content --- */
 
     main > a:link, main > a:visited, main > a:hover {
         color: #FFF;
@@ -482,11 +493,6 @@ mark::selection {
     hr {
         background-color: aliceblue;
     }
-
-    /*
-    main p {
-        color: #FFF;
-    }*/
 
     section.clickable {
         color: white;
