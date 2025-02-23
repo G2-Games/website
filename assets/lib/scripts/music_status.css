@@ -5,31 +5,26 @@
     flex-direction: column;
     max-width: 300px;
     margin: auto;
+    perspective: 800px;
 
     .track_name {
         font-size: 1.2em;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
     }
 
     .artist_name {
         font-size: 1em;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
     }
 
     .album_name {
         font-size: 0.9em;
-        color: #c1bfae;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+        color: #9c9c9c;
     }
 
     p {
         margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     p#musicStatus {
@@ -44,11 +39,44 @@
         background-color: grey;
     }
 
-    img {
+    img#mainArtwork {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        margin: auto;
+    }
+
+    div.artwork_container {
+        display: flex;
         margin: 20px;
         border-radius: 10px;
         height: 260px;
         width: 260px;
-        object-fit: contain;
     }
+
+    .floaty {
+        animation:
+            2s alternate infinite ease-in-out scale,
+            3s alternate infinite ease-in-out rotate;
+    }
+
+    div#playingBars {
+        margin: 0;
+        border-radius: 0;
+        mask: url(music_bars.svg) no-repeat center;
+        background-color: #ffffff;
+        height: auto;
+        padding: 0;
+        display: none;
+    }
+}
+
+@keyframes scale {
+    0%  { scale: 1; }
+    100% { scale: 1.03; }
+}
+
+@keyframes rotate {
+    0%  { transform: rotate3d(-1, 1, -1, 3deg); }
+    100% { transform: rotate3d(1, 1, 1, 3deg); }
 }

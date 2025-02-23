@@ -38,6 +38,25 @@ img.icon {
     height: 1em;
 }
 
+.svg-diagram {
+    color: black;
+}
+
+figure {
+    max-width: 100%;
+    margin-bottom: 20px;
+    display: block;
+    overflow: scroll;
+}
+
+figcaption {
+    font-size: 15pt;
+    font-style: italic;
+    margin: auto;
+    width: fit-content;
+    display: block;
+}
+
 @media(max-width: 700px) {
     section.img_grid {
         flex-direction: column;
@@ -46,5 +65,13 @@ img.icon {
     section.img_grid img {
         width: 100%;
         height: auto;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .svg-diagram {
+        color: #fffde6;
+        filter: invert(1);
     }
 }

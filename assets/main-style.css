@@ -272,8 +272,17 @@ main h3 {
 }
 
 main h4 {
+    font-family: "Montserrat", sans-serif;
     font-size: 1.3em;
     font-weight: bold;
+    margin-bottom: 8px;
+}
+
+main h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 8px;
 }
 
 main p, .type-text p {
@@ -294,16 +303,14 @@ ul, ol {
     hyphens: auto;
     hyphenate-character: '-';
     margin-left: 40px;
-
-    /*
-    li {
-        margin-left: 40px;
-    }
-    */
 }
 
 p + ul, p + ol {
     margin-top: -20px;
+}
+
+li > ul {
+    margin-bottom: 0;
 }
 
 main .tags {
@@ -402,6 +409,16 @@ nav.paginator .prev {
     display: block;
     position: absolute;
     left: 10px;
+}
+
+.MathJax {
+    font-size: 14pt;
+}
+
+center .MathJax {
+    margin-bottom: 15px;
+    font-size: 16pt;
+    display: block;
 }
 
 /* --- Mobile/Small Screens --- */

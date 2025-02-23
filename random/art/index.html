@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        section {
+            width: 100%;
+            box-sizing: border-box;
+            min-height: 100vh;
+            display: flex;
+            scroll-snap-align: start;
+        }
+
+        img, object {
+            max-width: 1024px;
+            width: 100%;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <section style="padding: 50px 0;background: #fee67f;">
+        <img src="./GreenOnion.png">
+    </section>
+
+    <section style="background: linear-gradient(-30deg,#00d2ff 0%,#3a47d5 100%);">
+        <object data="./kate.svg"></object>
+    </section>
+
+    <section style="background: linear-gradient(0deg,#94def3 50%,#407685 100%);">
+        <img src="./pastel-cities-sunset-tall.png" style="width:100%;max-width:unset;image-rendering:pixelated;">
+    </section>
+
+    <section style="background: linear-gradient(70deg, #8094def3 0%, #80407685 100%), url('noise.svg');">
+        <object data="./scoop_chase_bubblegum_crisis.svg"></object>
+    </section>
+
+    <section style="background: linear-gradient(90deg, #010101 0%, black 100%), url('noise.svg');">
+        <img src="./solar_eclipse-lossy.webp">
+    </section>
+
+    <section style="background: linear-gradient(70deg, #55ffff80 0%, #ffff7f80 100%), url('noise.svg');">
+        <object data="./text-gleam.svg"></object>
+    </section>
+
+    <section style="background-color: #ff8ba2">
+        <object data="./sqp_icon2.svg"></object>
+    </section>
+
+    <section style="background-color: #323295">
+        <object data="./corn_rocket.svg"></object>
+    </section>
+
+    <section style="background-color: #ffaa7f">
+        <object data="./3d_melon.svg"></object>
+    </section>
+
+    <section style="background-color: #a4ffb6">
+        <img src="./arduino-cutout.png">
+    </section>
+
+    <section style="padding: 100px 0;background-color: #aaaaff">
+        <object data="./little_busters_cat.svg"></object>
+    </section>
+
+    <section style="background-color: #69bafb">
+        <object data="./Little Space Software-Expanded.png" style="image-rendering:pixelated;max-height:80vh;max-width:80%;aspect-ratio:1;"></object>
+    </section>
+</main>
+</body>
+</html>

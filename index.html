@@ -25,6 +25,7 @@ A place for personal projects and things. Enjoy!">
 
     <!-- Music Tile -->
     <link rel="stylesheet" href="/assets/lib/scripts/music_status.css">
+    <script src="/assets/lib/scripts/music_status.js"></script>
 </head>
 <body>
     <header>
@@ -156,13 +157,20 @@ A place for personal projects and things. Enjoy!">
             <section>
                 <div class="music_tile">
                     <p id="musicStatus">Currently listening to:</p>
-                    <p class="track_name" id="track">???</p>
+                    <div style="display:grid;grid-template-columns: 80% 20%;">
+                        <p class="track_name" id="track">???</p>
+                        <div id="playingBars"></div>
+                    </div>
                     <hr>
                     <div style="display:flex;flex-direction:column;">
                         <p class="artist_name" id="albumArtist">???</p>
                         <p class="album_name" id="albumTitle">???</p>
                     </div>
-                    <img id="mainArtwork" src="https://placehold.co/260/2220/FFFDE6?text=?&font=roboto"/>
+                    <div class="artwork_container">
+                        <p id="mainArtworkPlaceholder"
+                            style="font-size:4em;margin:auto;width:fit-content;font-family:'Montserrat';font-weight:bold;">?</p>
+                        <img id="mainArtwork" src="" style="display:none;"/>
+                    </div>
                 </div>
             </section>
         </div>
@@ -177,5 +185,4 @@ A place for personal projects and things. Enjoy!">
         </p>
     </footer>
 </body>
-<script src="/assets/lib/scripts/music_status.js"></script>
 </html>

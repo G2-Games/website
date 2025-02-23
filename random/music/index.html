@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://g2games.dev/assets/main-style.css">
+  <link rel="stylesheet" href="/assets/lib/scripts/music_status.css">
+</head>
+<body>
+  <div class="music_tile">
+      <p id="musicStatus">Currently listening to:</p>
+      <div style="display:grid;grid-template-columns: 80% 20%;">
+          <p class="track_name" id="track">???</p>
+          <div id="playingBars"></div>
+      </div>
+      <hr>
+      <div style="display:flex;flex-direction:column;">
+          <p class="artist_name" id="albumArtist">???</p>
+          <p class="album_name" id="albumTitle">???</p>
+      </div>
+      <div class="artwork_container">
+          <p id="mainArtworkPlaceholder"
+              style="font-size:4em;margin:auto;width:fit-content;font-family:'Montserrat';font-weight:bold;">?</p>
+          <img id="mainArtwork" src="" style="display:none;"/>
+      </div>
+  </div>
+</body>
+<script src="https://g2games.dev/assets/lib/scripts/music_status.js"></script>
+</html>

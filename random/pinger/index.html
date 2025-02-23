@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Pings</title>
+<script>
+function ping() {
+    let music = new Audio('ping.mp3');
+    music.loop = false;
+    music.play();
+    setInterval(function() {
+        console.log("thing");
+        music.play();
+    }, 180000);
+}
+</script>
+</head>
+<body style="width:100vw;height:100vh;">
+    <div style="width: fit-content;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
+        <input type="button" value="sound" onclick="ping()" />
+    </div>
+</body>
+</html>
