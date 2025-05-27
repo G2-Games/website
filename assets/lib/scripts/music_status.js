@@ -94,11 +94,13 @@ async function startMusicTile() {
     }
 
     albumArtist.textContent = artistName;
+    albumArtist.title = artistName;
 
     track.textContent = trackName;
     track.title = trackName;
 
     albumTitle.textContent = albumName;
+    albumTitle.title = albumName;
 
     artworkTile.src = artworkSrc;
     if (artworkSrc == "") {
@@ -107,6 +109,10 @@ async function startMusicTile() {
     } else {
         artworkPlaceholder.style.display = "none";
         artworkTile.style.display = "block";
+        artworkTile.alt = "Album artwork for " + track.title;
+        artworkTile.addEventListener("click", (event) => {
+            console.log("test");
+        });
 
         if (playing == true && artworkSrc != "") {
             artworkTile.className = "floaty";

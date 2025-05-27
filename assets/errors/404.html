@@ -4,66 +4,55 @@
     <title>G2's Website | 404 - Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/main-style.css">
+    <link rel="preload" as="image" href="/assets/images/cat_light.png">
+    <link rel="preload" as="image" href="/assets/images/cat_dark.png">
     <style>
         @import url('/assets/fonts/fonts.css');
         * {
             margin: 0;
             box-sizing: border-box;
         }
-        ::selection {
-            color: #1e1e2e;
-            background-color: #a6e3a1;
-        }
         body {
             height: 100vh;
             width: 100vw;
 
             display: flex;
-            background-color: #111114;
-            color: white;
-            font-family: 'Roboto', 'Noto Sans', sans-serif;
             font-size: 16pt;
-            overflow: hidden;
         }
         main {
             max-width: 100vw;
-            max-height: 100vh;
             margin: auto;
+            padding-bottom: 20px;
         }
         h1 {
             font-size: 10em;
             text-align: center;
         }
-        h3 {
+        main h3 {
             font-weight: 500;
             margin: 0 10px;
             text-align: center;
+            font-family: "Roboto";
         }
-        p {
+        main p {
+            font-size: 15pt;
             margin: auto;
             padding: 0 5px;
             text-align: center;
             max-width: 540px;
             opacity: 0;
-            overflow: hidden;
             text-overflow: ellipsis;
+            line-height: 1;
         }
         a {
             text-decoration: none;
-        }
-        a:link {
-            color: DeepSkyBlue;
-        }
-        a:visited {
-            color: #7289DA;
-        }
-        a:hover {
-            color: DarkTurquoise;
         }
         hr {
             margin: 20px 10px;
             color: #f9e2af;
         }
+
         button {
             width: 75%;
             margin: 20px auto;
@@ -84,26 +73,16 @@
             background-color: transparent;
             color: #74c7ec;
         }
-        button:hover::before, button:hover::after {
-            content: '↜';
-            position: absolute;
-            left: 25%;
-            animation-duration: 1s;
-            animation-name: slideright;
-            animation-fill-mode: forwards;
-        }
-        button:hover::after {
-            left: unset;
-            right: 25%;
-        }
         button:active {
             background-color: #74c7ec55;
             color: #7dd8ff;
         }
+
         .text-box {
             display: flex;
             flex-direction: column;
             height: 4em;
+            overflow: hidden;
         }
 
         .slide-up {
@@ -124,9 +103,28 @@
 
         .cat {
             position: absolute;
-            top: 31px;
-            left: calc(50% - 1px);
+            top: 29px;
+            left: calc(50%);
             transform: translatex(-50%);
+            background-image: url("/assets/images/cat_light.png");
+            image-rendering: pixelated;
+            width: 137px;
+            height: 178px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .cat {
+                background-image: url("/assets/images/cat_dark.png");
+            }
+        }
+
+        @media(max-width: 700px) {
+            h1 {
+                font-size: 8em;
+            }
+            main h3 {
+                font-size: 1.2em;
+            }
         }
 
         #cookies {
@@ -170,7 +168,7 @@
     <main class="fade-in">
         <div style="position:relative;display: flex;justify-content: center;">
             <h1>404</h1>
-            <img class="cat" style="display:none;" id="cat" src="/assets/images/cat.png">
+            <div class="cat" style="display:none;" id="cat"></div>
         </div>
         <h3 id="notFound">The page you requested could not be found.</h3>
         <hr>
@@ -185,7 +183,7 @@
     function eatCookie() {
         let numCookies = localStorage.getItem('cookies') || 0;
         if (numCookies >= 1) numCookies--;
-        document.getElementById("cookies").innerHTML = numCookies;
+        document.getElementById('cookies').innerHTML = numCookies;
         localStorage.setItem('cookies', numCookies);
         console.log(numCookies);
     }
@@ -209,7 +207,7 @@
     const strings = [
         "Don't feel bad, have a cookie:</i> 🍪<i><br><sub>You have <span id='cookies'>" + cookiesRecieved + "</span> cookie" + s + "!</sub><br><sup><a style='cursor:pointer;color:teal;' onclick='eatCookie()'>Eat Cookie</a></sup>",
         "Just think, it could be worse",
-        "Instead of staring at this page, you could go outside!",
+        "Instead of staring at this page, <abbr title='If you are already outside, sorry'>you could go outside!</abbr>",
         "Where did it go?",
         "Error reduces<br>Your expensive computer<br>To a simple stone.",
         "Sit back, relax, have some tea...</i> 🍵<i>",
@@ -217,17 +215,21 @@
         "Where has the time gone, it's </i>&lt;currentTime&gt;<i> already!",
         "This message brought to you by JavaScript!",
         "This is not the page you are looking for.",
-        "Go check out <a href='https://xkcd.com/'>xkcd</a> instead!",
+        "Go check out <a href='https://xkcd.com/' target='_blank'>xkcd</a> instead!",
         "Won't you please observe<br>A brief moment of silence<br>For the dead server?",
         "Let's get you home, son",
-        "Nya~~!"
+        "Nya~~!",
+        "Messages made possible by <a href='https://8325.org/haiku/' target='_blank'>NetPositive</a>"
     ];
     let messageIndex = Math.floor(Math.random() * strings.length);
     const message = strings[messageIndex];
     const messageTarget = document.getElementById("message");
     messageTarget.innerHTML = "<i>" + message + "</i>";
 
-    console.log(messageIndex);
+    console.log(message);
+    console.log("Why are you looking at the console on a 404 page...?");
+    // For that matter, why are you looking at the source on a 404 page!
+    // You're probably cool is why.
 
     if (messageIndex == 0) {
         localStorage.setItem('cookies', cookiesRecieved);
