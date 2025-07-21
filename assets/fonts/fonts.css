@@ -9,6 +9,12 @@
     src: url('Roboto-Regular.ttf');
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url('InterVariable.ttf');
+    font-feature-settings: "ss07" on;
+}
+
 /* Serif */
 @font-face {
     font-family: "IBM Plex Serif";

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lexend:wght@100..900&family=Sedan:ital@0;1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+}
+
+.big_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px;
+    height: 100%;
+    width: min-content;
+    filter: drop-shadow(8px 8px 0px #414178);
+    position: sticky;
+    top: 0;
+}
+
+p.big {
+    writing-mode: sideways-lr;
+    text-orientation: sideways-right;
+    font-family: "Cal Sans", sans-serif;
+    font-size: 10em;
+    line-height: 0.6;
+}
+
+.announcement_box {
+    margin-left: 20px;
+    padding-right: 40px;
+    max-width: 100%;
+}
+
+.announcement_box img {
+    max-width: 100%;
+    max-height: 1000px;
+}
+
+.announcement_box h1 {
+    font-family: "Lexend", sans-serif;
+    font-size: 9em;
+}
+
+.announcement_box h2 {
+    font-family: "Sedan", sans-serif;
+    font-size: 7em;
+
+}
+
+.announcement_box h2.overlay {
+    position: absolute;
+    top: -50px;
+}
+</style>
+</head>
+<body>
+    <div class="big_box">
+        <p class="big" style="color: #3ad8ab;">Dangoware</p>
+        <p class="big" style="color: #ffffff;">Dangoware</p>
+        <p class="big" style="color: #ff738f;">Dangoware</p>
+        <img src="dangoware_icon.svg" style="grid-column: span 3;max-width:100%;rotate: -90deg;">
+    </div>
+    <div class="announcement_box">
+        <h1>The next big thing</h1>
+        <div style="position:relative;margin-top: 30px;">
+            <h2 class="overlay">I'm sure this will take off</h2>
+            <img src="gensokyo.jpg">
+            <img src="miodango.jpg" style="width:600px;margin:50px;float:right;">
+            <h2>More text down here!?</h2>
+            <p style="font-size: 2em;">Yes there is, and it's laid out nicely, too. What am I even doing with this page, you might ask? That's a great question, and I can't answer it!</p>
+            <p style="font-size: 2em;margin-top:30px;">Also the layout of this page is weird</p>
+        </div>
+    </div>
+</body>
+</html>

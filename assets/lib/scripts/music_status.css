@@ -44,6 +44,7 @@
         max-height: 100%;
         object-fit: contain;
         margin: auto;
+        image-rendering: optimizeQuality;
     }
 
     div.artwork_container {

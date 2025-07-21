@@ -13,7 +13,7 @@
 body {
     max-width: 1200px;
     margin: auto;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
     padding: 20px;
     padding-bottom: 0px;
     display: flex;
@@ -218,6 +218,7 @@ section.clickable {
     flex-direction: column;
     height: 100%;
     color: black;
+    position: relative;
 }
 
 section.clickable::after {
