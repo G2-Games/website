@@ -280,7 +280,7 @@ main h5 {
     margin-bottom: 8px;
 }
 
-main p, .type-text p {
+main p, .type-text p, main details {
     font-size: 15pt;
     line-height: 1.7em;
     text-align: left;

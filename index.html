@@ -55,7 +55,7 @@ A place for personal projects and things. Enjoy!">
 
             <p>If you would like to get in touch with me, I actively check:</p>
             <ul style="list-style-type: none;">
-                <li style="margin-bottom:2px;">〜 Email: <code>g2@g2games.dev</code></li>
+                <li>〜 Email: <code>g2@g2games.dev</code></li>
                 <li>〜 Discord: <code>g2_games</code></li>
             </ul>
 
@@ -89,10 +89,22 @@ A place for personal projects and things. Enjoy!">
         <h2 class="sep center">More About Me</h2>
         <section class="centered">
             <p>
+                Maybe obviously, but I am an active software developer, I like to work on low level
+                systems programming and embedded development, but I'm comfortable working on basically
+                any layer of the software hierarchy. I try to keep things interesting instead of just
+                doing whatever people say is the best, for example the main pages of this site are
+                entirely standard HTML with some JS tacked on, but without using a framework or anything,
+                just hosted straight through Apache! Oh, also I hate AI especially for programming,
+                did I mention that?
+            </p>
+            <p>
                 I like MiniDisc devices, and have written
                 <a href="https://github.com/G2-Games/minidisc-rs">some software</a>
                 for them! I personally have an MZ&#8209;NF610, MZ&#8209;NHD600, and an
                 MZ&#8209;E707. Go check out <a href="https://www.minidisc.wiki/">the wiki!</a>
+                Other than MiniDiscs, I appreciate physical media of all kinds, such as Floppies,
+                CDs, DVD/Blu-Rays, and anything else physical. It's just nice to have a real
+                high quality copy of the media, that is yours <i>forever</i>!
             </p>
             <p>
                 I also like the Sony PSP and PSVita consoles, I hope to do some homebrew for
@@ -101,25 +113,21 @@ A place for personal projects and things. Enjoy!">
                 <a href="https://github.com/pspdev/pspsdk">C</a> SDKs for it!).
             </p>
             <p>
-                I appreciate physical media of all kinds, such as Floppies, CDs, DVD/Blu-Rays, MiniDiscs,
-                and anything else physical. It's just nice to have a real high quality copy of the media,
-                that is yours <i>forever</i>!
-            </p>
-            <p>
-                I'm interested in aerospace, including rockets, aircraft, and similar things. I've made
-                a few projects related to it as well as part of my
-                <a href="https://unlaero.space">university's club</a>.
+                I'm interested in aerospace, including rockets, aircraft, drones, and similar
+                things. I've made a few projects related to it as well as part of my
+                <a href="https://unlaero.space">university's club</a>. I also have an interest in
+                amateur radio, and have been a licensed (extra class!) operator for a very long
+                time now. One of my favorite radios is my Icom IC-25A!
             </p>
         </section>
 
         <!-- Favorite things -->
         <h2 class="sep center">My Favorites</h2>
-        <div class="centered three_column">
+        <section class="centered three_column">
             <section>
                 <p>General Apps:</p>
                 <ul>
                     <li>Browser - <a href="https://www.mozilla.org/en-US/firefox/" title="Keep the web free!">Firefox</a></li>
-                    <li>Notetaking - <a href="https://github.com/zadam/trilium">Trilium</a></li>
                     <li>Music Player - <a href="https://tauonmusicbox.rocks/">Tauon</a></li>
                 </ul>
 
@@ -131,6 +139,7 @@ A place for personal projects and things. Enjoy!">
 
                 <p>Fonts:</p>
                 <ul>
+                    <li><a href="https://rsms.me/inter/">Inter</a></li>
                     <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a></li>
                     <li><a href="https://github.com/subframe7536/maple-font">Maple Mono</a></li>
                     <li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a></li>
@@ -162,37 +171,37 @@ A place for personal projects and things. Enjoy!">
                 <div class="music_tile">
                     <p id="musicStatus">Currently listening to:</p>
                     <div style="display:grid;grid-template-columns: 80% 20%;">
-                        <p class="track_name" id="track">???</p>
+                        <p class="track_name" id="track">Loading...</p>
                         <div id="playingBars"></div>
                     </div>
                     <hr>
                     <div style="display:flex;flex-direction:column;">
-                        <p class="artist_name" id="albumArtist">???</p>
-                        <p class="album_name" id="albumTitle">???</p>
+                        <p class="artist_name" id="albumArtist"></p>
+                        <p class="album_name" id="albumTitle"></p>
                     </div>
                     <div class="artwork_container">
-                        <p id="mainArtworkPlaceholder"
-                            style="font-size:4em;margin:auto;width:fit-content;font-family:'Montserrat';font-weight:bold;">?</p>
+                        <p id="mainArtworkPlaceholder">?</p>
                         <img id="mainArtwork" src="" style="display:none;"/>
                     </div>
                 </div>
             </section>
-        </div>
+        </section>
 
-        <h2 class="sep center">Buttons</h2>
+        <!-- Buttons! -->
         <section class="centered button-showcase">
+            <img src="/assets/images/buttons/g2_button.gif" height="31" />
             <img src="https://88x31.kate.pet/sun.gif" height="31" />
             <img src="https://88x31.kate.pet/agplv3-88x31.png" height="31" />
-            <img src="https://nucleartech.wiki/antinft.gif" height="31" />
-            <a href="https://ublockorigin.com/"><img src="https://nucleartech.wiki/ublock-now.png" height="31" /></a>
+            <img src="/assets/images/buttons/antinft.gif" height="31" />
+            <a href="https://ublockorigin.com/"><img src="/assets/images/buttons/ublock-now.png" height="31" /></a>
             <a href="https://gensokyoradio.net/"><img src="/assets/images/buttons/GensokyoRadio-Button.png" height="31" /></a>
             <img src="/assets/images/buttons/overwatch.png" height="31" />
-            <img src="https://nucleartech.wiki/NoAi_04.png" height="31" />
+            <img src="/assets/images/buttons/NoAi_04.png" height="31" />
             <img src="https://88x31.kate.pet/hate_squarespace.jpg" height="31" />
-            <img src="https://88x31.kate.pet/poweredbyfedora.gif" height="31" />
+            <a href="https://fedoraproject.org/"><img src="https://88x31.kate.pet/poweredbyfedora.gif" height="31" /></a>
             <img src="https://u-group13.org/images/buttons/miku.gif" height="31" />
-            <img src="https://nucleartech.wiki/contains-java.png" height="31" />
-            <img src="https://hellnet.work/8831/img/buttons/himiko_shizura_loveyaoi2.gif" />
+            <img src="/assets/images/buttons/contains-java.png" height="31" />
+            <img src="/assets/images/buttons/himiko_shizura_loveyaoi2.gif" />
             <a href="https://eightyeightthirty.one/"><img src="https://eightyeightthirty.one/88x31.png" height="31" /></a>
         </section>
     </main>

@@ -47,6 +47,14 @@
         image-rendering: optimizeQuality;
     }
 
+    p#mainArtworkPlaceholder {
+        font-size: 4em;
+        margin: auto;
+        width: fit-content;
+        font-family: 'Montserrat';
+        font-weight: bold;
+    }
+
     div.artwork_container {
         display: flex;
         margin: 20px;

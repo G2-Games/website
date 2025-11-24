@@ -55,10 +55,9 @@ async function startMusicTile() {
         );
 
         if (searchedReleases["count"] >= 1) {
-            if (searchedReleases["recordings"][0]["releases"][0]) {
-
+            if (searchedReleases["recordings"] != null) {
+                releaseMBID = searchedReleases["recordings"][0]["releases"][0]["id"];
             }
-            releaseMBID = searchedReleases["recordings"][0]["releases"][0]["id"];
         }
     }
 
@@ -111,7 +110,7 @@ async function startMusicTile() {
         artworkTile.style.display = "block";
         artworkTile.alt = "Album artwork for " + track.title;
         artworkTile.addEventListener("click", (event) => {
-            console.log("test");
+            window.open(url,'_blank');
         });
 
         if (playing == true && artworkSrc != "") {
